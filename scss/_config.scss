@@ -14,7 +14,7 @@ $background-opacity: 0.9;
             background: $home-image, rgba($primary-color, $background-opacity);
             background-attachment: fixed;
             background-size: cover;
-            // background-blend-mode: saturation; luminosity
+            //background-blend-mode: saturation;// luminosity
 
             &::after {
                 content: '';
@@ -27,5 +27,30 @@ $background-opacity: 0.9;
                 background: rgba($primary-color, $background-opacity);
             }
         }
+    }
+}
+
+// Media Query Mixins
+@mixin mediaSm {
+    @media screen and (max-width: 500px) {
+        @content;
+    }
+}
+
+@mixin mediaMd {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mediaLg {
+    @media screen and (min-width: 769px) and (max-width: 1170px) {
+        @content;
+    }
+}
+
+@mixin mediaXl {
+    @media screen and (mim-width: 1171px) {
+        @content;
     }
 }
