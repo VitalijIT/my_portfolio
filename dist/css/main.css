@@ -110,11 +110,10 @@ body {
       position: absolute;
       top: 0;
       right: 0;
-      bottom: 0;
       left: 0;
+      bottom: 0;
       z-index: -1;
-      background: rgba(68, 68, 68, 0.9);
-      background-attachment: fixed; }
+      background: rgba(68, 68, 68, 0.9); }
 
 h1, h2, h3 {
   margin: 0;
@@ -140,6 +139,7 @@ header {
 
 main {
   padding: 4rem;
+  height: 100vh;
   min-height: calc(100vh - 60px); }
   main .icons {
     margin-top: 1rem; }
