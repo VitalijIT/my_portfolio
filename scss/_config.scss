@@ -20,9 +20,8 @@ $background-opacity: 0.9;
                 content: '';
                 position: absolute;
                 top: 0;
-                right: 0;
-                left: 0;
-                bottom: 0;
+                width: 100%;
+                height: calc(100% + 60px);
                 z-index: -1;
                 background: rgba($primary-color, $background-opacity);
             }
