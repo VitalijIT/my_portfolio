@@ -80,9 +80,10 @@ main {
     display: grid;
     grid-gap: 30px;
     grid-template-areas:
-    'bioimage bio bio'
-    'job1 job2 job3';
-    grid-template-columns: repeat(3, 1fr);
+    'bioimage bio bio bio .'
+    'job1 job2 job3 job4 job5'
+    'job6 . . . .';
+    grid-template-columns: repeat(5, 1fr);
 
     .bio-image {
         grid-area: bioimage;
@@ -105,11 +106,26 @@ main {
     .job-3 {
         grid-area: job3
     }
-    
+    .job-4 {
+        grid-area: job4
+    }
+    .job-5 {
+        grid-area: job5
+    }
+    .job-6 {
+        grid-area: job6
+    }
+
+
     .job {
         background: lighten($primary-color, 5);
         padding: 0.5rem;
         border-bottom: 5px solid $secondary-color;
+        width: 300px;
+        margin: 0 auto;
+        &__header {
+            text-align: center;
+        }
     }
 }
 
@@ -117,7 +133,7 @@ main {
 .projects {
     display: grid;
     grid-gap: 0.7rem;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 
     img {
         width: 100%;

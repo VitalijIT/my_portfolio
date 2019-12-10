@@ -1,13 +1,28 @@
 // Widescreens
-@include mediaXXL {
+@include mediaUltra {
     .menu-btn {
         right: calc((100% - 1990px)/2);
     }
 }
 
-@include mediaXl {
-    .projects {
+@include mediaXXL {
+    .about-info {
+        grid-template-areas:
+                'bioimage bio bio bio'
+                'job1 job2 job3 job4'
+                'job5 job6 . .';
+
         grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@include mediaXl {
+    .about-info {
+        grid-template-areas:
+                'bioimage bio bio'
+                'job1 job2 job3'
+                'job4 job5 job6';
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -16,7 +31,14 @@
     .projects {
         grid-template-columns: repeat(3, 1fr);
     }
-
+    .about-info {
+        grid-template-areas:
+                'bioimage bio'
+                'job1 job2 '
+                'job3 job4'
+                'job5 job6';
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 // Tablets & Small Laptops
@@ -60,12 +82,15 @@
     }
 
     .about-info {
-        grid-template-areas: 
+        grid-template-areas:
         'bioimage'
         'bio'
         'job1'
         'job2'
-        'job3';
+        'job3'
+        'job4'
+        'job5'
+        'job6';
 
         grid-template-columns: 1fr;
     }
@@ -89,10 +114,13 @@
     }
 
     .boxes {
-
         div{
             font-size: 1.5rem;
+            padding: 0.5rem 1rem;
         }
+    }
+    h1.lg-heading {
+        font-size: 4rem;
     }
 }
 

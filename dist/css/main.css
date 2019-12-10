@@ -159,8 +159,8 @@ main {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
-  grid-template-columns: repeat(3, 1fr); }
+  grid-template-areas: 'bioimage bio bio bio .' 'job1 job2 job3 job4 job5' 'job6 . . . .';
+  grid-template-columns: repeat(5, 1fr); }
   .about-info .bio-image {
     grid-area: bioimage;
     margin: auto;
@@ -175,15 +175,25 @@ main {
     grid-area: job2; }
   .about-info .job-3 {
     grid-area: job3; }
+  .about-info .job-4 {
+    grid-area: job4; }
+  .about-info .job-5 {
+    grid-area: job5; }
+  .about-info .job-6 {
+    grid-area: job6; }
   .about-info .job {
     background: #515151;
     padding: 0.5rem;
-    border-bottom: 5px solid #eece1a; }
+    border-bottom: 5px solid #eece1a;
+    width: 300px;
+    margin: 0 auto; }
+    .about-info .job__header {
+      text-align: center; }
 
 .projects {
   display: grid;
   grid-gap: 0.7rem;
-  grid-template-columns: repeat(3, 1fr); }
+  grid-template-columns: repeat(4, 1fr); }
   .projects img {
     width: 100%;
     border: 3px #fff solid; }
@@ -239,13 +249,22 @@ main {
   .menu-btn {
     right: calc((100% - 1990px)/2); } }
 
-@media screen and (min-width: 1171px) {
-  .projects {
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+  .about-info {
+    grid-template-areas: 'bioimage bio bio bio' 'job1 job2 job3 job4' 'job5 job6 . .';
     grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (min-width: 1171px) and (max-width: 1440px) {
+  .about-info {
+    grid-template-areas: 'bioimage bio bio' 'job1 job2 job3' 'job4 job5 job6';
+    grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {
-    grid-template-columns: repeat(3, 1fr); } }
+    grid-template-columns: repeat(3, 1fr); }
+  .about-info {
+    grid-template-areas: 'bioimage bio' 'job1 job2 ' 'job3 job4' 'job5 job6';
+    grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -274,7 +293,7 @@ main {
       width: 150px;
       height: 150px; }
   .about-info {
-    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3' 'job4' 'job5' 'job6';
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }
@@ -287,4 +306,7 @@ main {
   .projects {
     grid-template-columns: 1fr; }
   .boxes div {
-    font-size: 1.5rem; } }
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem; }
+  h1.lg-heading {
+    font-size: 4rem; } }
