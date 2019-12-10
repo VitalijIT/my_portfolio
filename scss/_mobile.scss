@@ -1,4 +1,10 @@
 // Widescreens
+@include mediaXXL {
+    .menu-btn {
+        right: calc((100% - 1990px)/2);
+    }
+}
+
 @include mediaXl {
     .projects {
         grid-template-columns: repeat(4, 1fr);

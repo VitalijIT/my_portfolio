@@ -114,6 +114,10 @@ body {
       z-index: -1;
       background: rgba(68, 68, 68, 0.9); }
 
+.content {
+  max-width: 1920px;
+  margin: 0 auto; }
+
 h1, h2, h3 {
   margin: 0;
   font-weight: 400; }
@@ -230,6 +234,10 @@ main {
   background: #373737;
   color: #fff;
   height: 60px; }
+
+@media screen and (min-width: 2000px) {
+  .menu-btn {
+    right: calc((100% - 1990px)/2); } }
 
 @media screen and (min-width: 1171px) {
   .projects {
